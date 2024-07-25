@@ -27,7 +27,7 @@ export const AuthContext = createContext();
 
     const userAuthentication = async()=>{
         try {
-            const response = await fetch("http://localhost:5000/api/auth/user",{
+            const response = await fetch("https://game-site-5.onrender.com/api/auth/user",{
                 method: "GET",
                 headers: {
                     Authorization:`Bearer ${token}`,
@@ -46,7 +46,7 @@ export const AuthContext = createContext();
 // fetch services from the database
     // const getServices = async()=>{
     //     try {
-    //         const response = await fetch("http://localhost:5000/api/data/service",{
+    //         const response = await fetch("https://game-site-5.onrender.com/api/data/service",{
     //             method: "GET",
     //         });
             
