@@ -74,3 +74,4 @@ const FlappyBirdGame = () => {
 };
 
 export default FlappyBirdGame;
+
