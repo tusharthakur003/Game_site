@@ -17,7 +17,7 @@ const Signup = () => {
   const {storetokenInLS} = useAuth();
   //handling user data
   const handleInput = (e)=>{
-    console.log(e);
+    // console.log(e);
     let name = e.target.name;
     let value = e.target.value;
 
