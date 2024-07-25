@@ -5,26 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm install --legacy-peer-deps && vite build",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "resolutions": {
-    "react-addons-css-transition-group": "15.6.2"
-  },
   "dependencies": {
     "axios": "^1.7.2",
-    "chess.js": "^1.0.0-beta.8",
-    "chessboardjsx": "^2.4.7",
     "nodemon": "^3.1.4",
-    "phaser": "^3.80.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-game-kit": "^1.0.6",
     "react-router-dom": "^6.22.3",
-    "react-snake": "^1.0.3",
-    "react-snake-game": "^1.0.9",
-    "react-tetris": "^0.4.0",
     "react-toastify": "^10.0.5"
   },
   "devDependencies": {
@@ -41,4 +31,3 @@
     "vite": "^5.2.0"
   }
 }
-

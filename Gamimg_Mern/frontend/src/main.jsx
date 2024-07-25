@@ -14,19 +14,6 @@ import Logout from './components/Logout/Logout.jsx'
 import { AuthProvider } from './store/auth.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ChessGame from './games/Chess.jsx'
-
-import TicTacToe from './games/tic-tac-toe.jsx'
-import MemoryCardGame from './games/memoryCardGame.jsx'
-
-import RockPaperScissors from './games/rock-paper-scissors.jsx'
-import RacingGame from './games/RacingGame.jsx'
-
-import ShootingGame from './games/ShootingGame.jsx'
-// import TetrisGame from './games/TetrisGame.jsx'
-import FlappyBirdGame from './games/FlappyBirdGame.jsx'
-import SnakeGameComponent from './games/SnakeGameComponent.jsx'
-import SimpleGame from './games/SimpleGames.jsx'
 
 
 
@@ -40,16 +27,6 @@ const router = createBrowserRouter(
       <Route path='Signup'element={<Signup/>} />
       <Route path='Signin'element={<Signin/>} />
       <Route path='Logout'element={<Logout/>}/>
-      <Route path="/games/chess" element={<ChessGame />} />
-      <Route path="/games/tictactoe" element={<TicTacToe />} />
-      <Route path="/games/memory" element={<MemoryCardGame />} />
-      <Route path="/games/rockpaperscissors" element={<RockPaperScissors />} />
-       <Route path="/games/racing" element={<RacingGame />} />
-      <Route path="/games/shooting" element={<ShootingGame />} />
-        <Route path="/games/flappybird" element={<FlappyBirdGame />} />
-        <Route path="/games/snake" element={<SnakeGameComponent />} />
-        <Route path="/games/simplegame" element={<SimpleGame />} />
-
       <Route path='*' element={<Error/>}/>
     </Route>
   )
