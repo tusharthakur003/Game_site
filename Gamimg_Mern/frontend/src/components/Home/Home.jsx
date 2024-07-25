@@ -20,6 +20,9 @@ return (
               <Link to="https://68808795-016c-435b-a275-06b86a4c9353.poki-gdn.com/c202a8a8-5237-4f47-9d13-9e561f63d838/index.html?country=IN&ccpaApplies=0&url_referrer=https%3A%2F%2Fpoki.com%2F&tag=pg-v5.12.0+29bedb4acf8dafb63c9407897f25591326e2b507&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fblocky-puzzle&hoist=yes&nonPersonalized=n&familyFriendly=n&categories=7%2C13%2C1141%2C72&ab=372d1d2fb397343a240619df4558e76734e4d551&experiment=control-38740565&game_id=68808795-016c-435b-a275-06b86a4c9353&game_version_id=c202a8a8-5237-4f47-9d13-9e561f63d838&inspector=0&csp=3" className="mx-2"><img className="game-img w-40 h-40 object-cover" src="https://play-lh.googleusercontent.com/glxKFJFnCoF5wZECb7Soikdi_vXs-MoeJqUoZ5mZs23eJaX26D1mpVHOxRWp6oQUu0w=w240-h480-rw" /></Link>
             </div>
         </main> */}
+        <div>
+          <Link to="/games/chess/">chess</Link>
+        </div>
       </>
     );
 }
