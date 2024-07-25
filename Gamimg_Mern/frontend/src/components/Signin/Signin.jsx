@@ -39,9 +39,9 @@ const Signin = () => {
         body: JSON.stringify(user),
       });
 
-      console.log("login form",response);
 
       const res_data = await response.json();
+      console.log(res_data);
       if(response.ok){
         toast.success("Login Sucessfully")
         

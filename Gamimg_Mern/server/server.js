@@ -19,7 +19,7 @@ const corsOptions = {
 app.get("/find",(req,res)=>{
     res.send("Hey u find me");
 })
-
+console.log("u r in")
 app.use(cors(corsOptions));
 app.use(express.json());
 app.get("/find", (req, res) => {
