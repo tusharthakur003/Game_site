@@ -56,7 +56,7 @@ export default function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-black-900 sm:text-center">
                         <a href="#" className="hover:underline">
-                            Tushar Parashar
+                            Tushar
                         </a>
                         . All Rights Reserved 2024.
                     </span>
