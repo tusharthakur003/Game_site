@@ -14,6 +14,7 @@ import Logout from './components/Logout/Logout.jsx'
 import { AuthProvider } from './store/auth.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ChessGame from './components/games/ChessGame.jsx'
 
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path='Signup'element={<Signup/>} />
       <Route path='Signin'element={<Signin/>} />
       <Route path='Logout'element={<Logout/>}/>
+      <Route path="games/chess" element={<ChessGame />} />
       <Route path='*' element={<Error/>}/>
     </Route>
   )
