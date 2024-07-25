@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb://127.0.0.1:27017/mern_admin";
-mongoose.connect(URI)
-// const URI = process.env.MONGODB_URI;
-
-const connectDb = async()=>{
+const connectDb = async () => {
+    const URI = "mongodb+srv://tusharkumar:nppX3DKdseMzEyx3@gamingcluster.ctjmr11.mongodb.net/?retryWrites=true&w=majority&appName=gamingCluster";
     try {
-        await mongoose.connect(URI);
-        console.log("connection successful to DB");
+        await mongoose.connect(URI, {
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true,
+        });
+        console.log("Connected to the database successfully");
     } catch (error) {
-        console.error("Database connection failed");
-        console.log(error);
-        process.exit(0);
+        console.error("Database connection failed:", error);
+        process.exit(1);
     }
-}
+};
 
 module.exports = connectDb;

@@ -1,37 +1,41 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
-const app = express();
-
-const authRoute = require("./router/auth_router")
-const contactRoute = require("./router/contact_router")
-const serviceRoute = require("./router/service-router")
 const connectDb = require("./utils/db");
+const authRoute = require("./router/auth_router");
+const contactRoute = require("./router/contact_router");
+const router =require('./router/service-router.js');
 const errorMiddleware = require('./middlewares/error_middleware');
 
-const PORT = 5000;
+const app = express();
+const PORT =5000;
 
-//handling cors policy issue
+// Handling CORS policy issue
 const corsOptions = {
     origin: "http://localhost:5173",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-    Credentials: true,
+    credentials: true,
 };
+app.get("/find",(req,res)=>{
+    res.send("Hey u find me");
+})
 
 app.use(cors(corsOptions));
-
-
-
 app.use(express.json());
+app.get("/find", (req, res) => {
+    res.send("backend services");
+});
+
 app.use("/api/auth", authRoute);
 app.use("/api/form", contactRoute);
-app.use("/api/data", serviceRoute);
-
-
+app.use("/api/data", router);
 app.use(errorMiddleware);
 
-connectDb().then(()=>{
-    app.listen(PORT, ()=>{
-        console.log(`server is running at port ${PORT}`);
-    })
-})
+// Connect to the database and start the server
+connectDb().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server is running at port ${PORT}`);
+    });
+}).catch(error => {
+    console.error("Failed to connect to the database:", error);
+});
