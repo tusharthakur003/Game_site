@@ -10,12 +10,14 @@ const errorMiddleware = require('./middlewares/error_middleware');
 const app = express();
 const PORT =5000;
 
-// Handling CORS policy issue
+// Handling CORS policy issue //https://game-site-5.onrender.com
 const corsOptions = {
     origin: "https://game-site-5.onrender.com",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };
+
+
 app.get("/find",(req,res)=>{
     res.send("Hey u find me");
 })

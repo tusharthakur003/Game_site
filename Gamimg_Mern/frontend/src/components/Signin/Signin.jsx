@@ -28,37 +28,49 @@ const Signin = () => {
     toast("Password Yaad Rakha Kr bhai")
   }
   //handlesubmit
-  const handleSubmit = async (e)=>{
-    e.preventDefault();
-    try {
-      const response = await fetch(`https://game-site-5.onrender.com/api/auth/login`,{
-        method:"POST",
-        headers:{
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch('https://game-site-5.onrender.com/api/auth/login', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
 
-      console.log("login form",response);
-
-      const res_data = await response.json();
-      if(response.ok){
-        toast.success("Login Sucessfully")
-        
-        //store the token in local storage
-        storetokenInLS(res_data.token);
-        // localStorage.setItem("token", res_data.token);
-
-        setUser({email:"", password:""});
-        navigate("/Premium");
-      }else{
-        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message);
-      }
-
-    } catch (error) {
-      console.log(error);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-  };
+
+    // Read response as text and try to parse it
+    const text = await response.text();
+
+    // Log the response text for debugging
+    console.log("Response text:", text);
+
+    let res_data;
+    try {
+      res_data = JSON.parse(text);
+    } catch (error) {
+      throw new Error('Failed to parse JSON');
+    }
+
+    if (response.ok) {
+      toast.success("Login Successfully");
+      storetokenInLS(res_data.token);
+      setUser({ email: "", password: "" });
+      navigate("/Premium");
+    } else {
+      toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message);
+    }
+
+  } catch (error) {
+    console.error("Error:", error);
+    toast.error("An error occurred during login.");
+  }
+};
+
 
   return (
     <div>
