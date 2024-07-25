@@ -15,6 +15,19 @@ import { AuthProvider } from './store/auth.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ChessGame from './components/games/ChessGame.jsx'
+import TicTacToe from './components/games/TicTaeToe.jsx'
+import CounterGame from './components/games/SCG.jsx'
+import NumberGuessingGame from './components/games/NGG.jsx'
+
+import RockPaperScissors from './components/games/RPS.jsx'
+import MemoryCardGame from './components/games/MCG.jsx'
+import WhackAMole from './components/games/WhackMole.jsx'
+import SnakeGame from './components/games/SnakeGame.jsx'
+import PongGame from './components/games/PongGame.jsx'
+import ClickerGame from './components/games/ClickerGmae.jsx'
+import BreakoutGame from './components/games/BreakoutGmae.jsx'
+import TetrisGame from './components/games/Tetris.jsx'
+import Minesweeper from './components/games/MineSweeper.jsx'
 
 
 
@@ -29,7 +42,21 @@ const router = createBrowserRouter(
       <Route path='Signin'element={<Signin/>} />
       <Route path='Logout'element={<Logout/>}/>
       <Route path="games/chess" element={<ChessGame />} />
+      <Route path="games/tictactoe" element={<TicTacToe />} />
+      <Route path="games/memory" element={<MemoryCardGame />} />
+        <Route path="games/rockpaperscissors" element={<RockPaperScissors />} />
+        <Route path="games/counter" element={<CounterGame />} />
+        <Route path="games/numberguessing" element={<NumberGuessingGame />} />
+        <Route path="games/whackamole" element={<WhackAMole />} />
+        <Route path="games/snake" element={<SnakeGame />} />
+        <Route path="games/pong" element={<PongGame />} />
+        <Route path="games/clicker" element={<ClickerGame />} />
+        <Route path="games/breakout" element={<BreakoutGame />} />
+        <Route path="games/tetris" element={<TetrisGame />} />
+        <Route path="games/minesweeper" element={<Minesweeper />} />
+        
       <Route path='*' element={<Error/>}/>
+
     </Route>
   )
 )

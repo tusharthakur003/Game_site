@@ -21,7 +21,19 @@ return (
             </div>
         </main> */}
         <div>
-          <Link to="/games/chess/">chess</Link>
+          <Link to="/games/chess/">Chess</Link>
+          <Link to="/games/tictactoe">Tic Tae Toe</Link>
+          <Link to="/games/memory">MemoryBased</Link>
+          <Link to="/games/rockpaperscissors">RPS</Link>
+          <Link to="/games/counter">Counter</Link>
+          <Link to="/games/numberguessing">Number Guessing</Link>
+          <Link to="/games/whackamole">Whackamole</Link>
+          <Link to="/games/snake">Snake</Link>
+          <Link to="/games/pong">Pong</Link>
+          <Link to="/games/clicker">Clicker</Link>
+          <Link to="/games/breakout">Break out</Link>
+          <Link to="/games/tetris">Tetris</Link>
+          <Link to="/games/minesweeper">Minesweeper</Link>
         </div>
       </>
     );
