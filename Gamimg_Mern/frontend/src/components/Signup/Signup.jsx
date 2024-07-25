@@ -31,7 +31,7 @@ const Signup = () => {
     e.preventDefault();
     console.log(user);
     try {
-      const response = await fetch(`https://game-site-5.onrender.com/api/auth/register`,{
+      const response = await fetch(`https://game-site-2.onrender.com/api/auth/register`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json",

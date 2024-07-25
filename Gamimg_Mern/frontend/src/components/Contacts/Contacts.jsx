@@ -43,7 +43,7 @@ export default function Contact() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const response = await fetch("https://game-site-5.onrender.com/api/form/contact",{
+            const response = await fetch("https://game-site-2.onrender.com/api/form/contact",{
                 method:"POST",
                     headers:{
                         "Content-Type": "application/json",

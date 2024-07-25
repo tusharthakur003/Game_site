@@ -10,7 +10,7 @@ const errorMiddleware = require('./middlewares/error_middleware');
 const app = express();
 const PORT =5000;
 
-// Handling CORS policy issue //https://game-site-5.onrender.com
+// Handling CORS policy issue //https://game-site-2.onrender.com
 const corsOptions = {
     origin: "https://game-site-5.onrender.com",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
