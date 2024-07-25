@@ -14,6 +14,7 @@ const PORT =5000;
 const corsOptions = {
     origin: "https://game-site-5.onrender.com",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+    allowedHeaders: ["Content-Type"],
     credentials: true,
 };
 
