@@ -53,7 +53,7 @@ const Premium = () => {
             {
               path: '/games/clicker',
               imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSYPZnf_gI3phvqHCfHnpbSGLc2luslhoQA&s',
-              title: 'Clicker'
+              title: 'Get Coins'
             }
           ].map((game, index) => (
             <div key={index} className="max-w-xs mt-10 mb-5 mx-3.5 bg-white border border-gray-200 rounded-lg dark:border-gray-700">

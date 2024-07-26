@@ -21,7 +21,7 @@ return (
             {
               path: '/games/clicker',
               imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSYPZnf_gI3phvqHCfHnpbSGLc2luslhoQA&s',
-              title: 'Clicker'
+              title: 'Get Coins'
             },
             {
               path: '/games/rockpaperscissors',
