@@ -6,7 +6,7 @@ import pointer from '../store/PointContext';
 
 const ClickerGame = () => {
   const coins=useContext(pointer);
-  const [score, setScore] = useState(100);
+  const [score, setScore] = useState(10);
   useEffect(()=>{
     coins.points=score;
     console.log(coins.points);
@@ -28,4 +28,3 @@ const ClickerGame = () => {
 };
 
 export default ClickerGame;
-
