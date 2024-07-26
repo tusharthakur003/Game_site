@@ -11,7 +11,7 @@ const Premium = () => {
   const handleClick = (e, path) => {
     e.preventDefault();
     if (coins.points < 10) {
-      setWarning('You do not have enough coins. Play Get Coins game to collect coins');
+      setWarning(<Link to="/games/clicker" className='text-blue-400 text-decoration-line: underline'> Get Coins </Link>);
     } else {
       setWarning('');
       coins.points = coins.points - 10;
