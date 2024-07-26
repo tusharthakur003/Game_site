@@ -12,7 +12,7 @@ const PORT =5000;
 
 // Handling CORS policy issue //https://game-site-2.onrender.com
 const corsOptions = {
-    origin: "https://game-site-5.onrender.com",
+    origin: "http://localhost:5173",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };

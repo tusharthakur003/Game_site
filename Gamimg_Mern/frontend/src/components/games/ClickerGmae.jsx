@@ -1,15 +1,24 @@
 // src/games/ClickerGame.jsx
-import { useState } from 'react';
+import { useState,useContext, useEffect } from 'react';
+
+import pointer from '../store/PointContext';
+
 
 const ClickerGame = () => {
-  const [score, setScore] = useState(0);
+  const coins=useContext(pointer);
+  const [score, setScore] = useState(100);
+  useEffect(()=>{
+    coins.points=score;
+    console.log(coins.points);
+
+  },[score])
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-2xl mb-4">Clicker Game</h1>
+      <h1 className="text-2xl mb-4">Get Coins</h1>
       <button
         className="px-4 py-2 mb-4 border-2 border-gray-400"
-        onClick={() => setScore(score + 1)}
+        onClick={() => setScore(score + 5)}
       >
         Click Me!
       </button>
@@ -19,3 +28,4 @@ const ClickerGame = () => {
 };
 
 export default ClickerGame;
+

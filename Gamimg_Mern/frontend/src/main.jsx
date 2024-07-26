@@ -28,6 +28,7 @@ import ClickerGame from './components/games/ClickerGmae.jsx'
 import BreakoutGame from './components/games/BreakoutGmae.jsx'
 import TetrisGame from './components/games/Tetris.jsx'
 import Minesweeper from './components/games/MineSweeper.jsx'
+import App from './App.jsx'
 
 
 
